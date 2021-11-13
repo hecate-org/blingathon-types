@@ -11,5 +11,5 @@ $ yarn add @hecate-org/blingaton-types
 
 ```ts
 
-import { Type } from "@hecate-org/blingaton-types"
+import { Type } from "@hecate-org/blingaton-types/build"
 ```
