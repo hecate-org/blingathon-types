@@ -3,7 +3,9 @@ export type MessageTypes = "text" | "document" | "image";
 export const OpCode = {
   hello: 0,
   auth_start: 1,
-  auth_reply: 2
+  auth_reply: 2,
+
+  exception: 1000
 } as const;
 
 export interface GatewayMessage {
