@@ -36,4 +36,5 @@ export interface Message {
   content: string;
   type: MessageTypes;
   timestamp: number;
+  channel: number;
 }
