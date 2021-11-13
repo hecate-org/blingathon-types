@@ -4,6 +4,7 @@ export const OpCode = {
   hello: 0,
   auth_start: 1,
   auth_reply: 2,
+  auth_success: 3,
 
   exception: 1000
 } as const;
@@ -13,7 +14,7 @@ export type Op = typeof OpCode[OpCodeKeys];
 
 export interface GatewayMessage {
     /** The gateway opcode. */
-  op: typeof OpCode;
+  op: Op;
 }
 
 export interface AuthStartMessage extends GatewayMessage {
@@ -26,7 +27,12 @@ export interface AuthReplyMessage extends GatewayMessage {
     key: string;
 }
 
-export interface Message extends GatewayMessage {
+export interface WSMessage extends GatewayMessage {
+  /** Represents a proper websocket message which has been encrypted. */
+  data: string;
+}
+
+export interface Message {
   content: string;
   type: MessageTypes;
   timestamp: number;

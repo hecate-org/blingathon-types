@@ -1,6 +1,6 @@
 {
   "name": "@hecate-org/blingaton-types",
-  "version": "1.0.8",
+  "version": "1.0.9",
   "description": "Types for the front and backend of the blingathon project",
   "main": "build/index.ts",  
   "types": "./dist/index.d.ts",
