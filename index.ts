@@ -1,14 +1,14 @@
 export type MessageTypes = "text" | "document" | "image";
 
-export enum OpCode {
-  hello = 0,
-  auth_start = 1,
-  auth_reply = 2
-}
+export const OpCode = {
+  hello: 0,
+  auth_start: 1,
+  auth_reply: 2
+} as const;
 
 export interface GatewayMessage {
     /** The gateway opcode. */
-  op: OpCode;
+  op: typeof OpCode;
 }
 
 export interface AuthStartMessage extends GatewayMessage {
