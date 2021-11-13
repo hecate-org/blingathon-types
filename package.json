@@ -1,0 +1,13 @@
+{
+  "name": "@hecate-org/blingaton-types",
+  "version": "1.0.1",
+  "description": "Types for the front and backend of the blingathon project",
+  "main": "index.ts",  
+  "types": "./dist/index.d.ts",
+  "scripts": {
+    "build": "tsc",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}
