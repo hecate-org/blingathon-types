@@ -8,6 +8,9 @@ export const OpCode = {
   exception: 1000
 } as const;
 
+type OpCodeKeys = keyof typeof OpCode;
+export type Op = typeof OpCode[OpCodeKeys];
+
 export interface GatewayMessage {
     /** The gateway opcode. */
   op: typeof OpCode;
